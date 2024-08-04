@@ -1,5 +1,6 @@
 import { Joke } from "../models/joke.model.js";
 
+// Create joke
 export const createJoke = async (req, res) => {
     try {
         const joke = await Joke.create(req.body);
@@ -9,6 +10,7 @@ export const createJoke = async (req, res) => {
     };
 };
 
+// Get jokes
 export const getJokes = async (req, res) => {
     try {
         const jokes = await Joke.find({});
@@ -23,6 +25,7 @@ export const getJokes = async (req, res) => {
     };
 };
 
+// Delete joke
 export const deleteJoke = async (req, res) => {
     try {
         const { id } = req.params;
@@ -39,6 +42,7 @@ export const deleteJoke = async (req, res) => {
     };
 };
 
+// Update joke
 export const updateJoke = async (req, res) => {
     try {
       const { id } = req.params;
